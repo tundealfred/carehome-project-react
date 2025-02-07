@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="bg-white shadow-sm sticky top-0 z-10 py-2">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
-        <div className="text-2xl font-bold text-gray-800">
+        <div className="text-2xl font-bold m-2 text-gray-800">
           <Link to="/" className="hover:text-blue-600 transition">
             Care Home Logo
           </Link>
@@ -55,9 +55,11 @@ const Navbar = () => {
             to="/"
             onClick={handleLinkClick}
             className={({ isActive }) =>
-              isActive
-                ? "text-blue-500 font-medium block py-2 px-6 md:py-0 md:px-0"
-                : "text-gray-800 hover:text-blue-500 block py-2 px-6 md:py-0 md:px-0"
+              `relative text-xl font-medium block py-2 px-6 md:py-0 md:px-0 ${
+                isActive
+                  ? "text-blue-500 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-yellow-400"
+                  : "text-gray-800 hover:text-blue-500 hover:after:absolute hover:after:left-0 hover:after:bottom-[-4px] hover:after:w-full hover:after:h-1 hover:after:bg-yellow-400"
+              } transition`
             }
           >
             Home
@@ -66,9 +68,11 @@ const Navbar = () => {
             to="/about"
             onClick={handleLinkClick}
             className={({ isActive }) =>
-              isActive
-                ? "text-blue-500 font-medium block py-2 px-6 md:py-0 md:px-0"
-                : "text-gray-800 hover:text-blue-500 block py-2 px-6 md:py-0 md:px-0"
+              `relative text-xl font-medium block py-2 px-6 md:py-0 md:px-0 ${
+                isActive
+                  ? "text-blue-500 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-yellow-400"
+                  : "text-gray-800 hover:text-blue-500 hover:after:absolute hover:after:left-0 hover:after:bottom-[-4px] hover:after:w-full hover:after:h-1 hover:after:bg-yellow-400"
+              } transition`
             }
           >
             About
@@ -77,9 +81,11 @@ const Navbar = () => {
             to="/services"
             onClick={handleLinkClick}
             className={({ isActive }) =>
-              isActive
-                ? "text-blue-500 font-medium block py-2 px-6 md:py-0 md:px-0"
-                : "text-gray-800 hover:text-blue-500 block py-2 px-6 md:py-0 md:px-0"
+              `relative text-xl font-medium block py-2 px-6 md:py-0 md:px-0 ${
+                isActive
+                  ? "text-blue-500 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-yellow-400"
+                  : "text-gray-800 hover:text-blue-500 hover:after:absolute hover:after:left-0 hover:after:bottom-[-4px] hover:after:w-full hover:after:h-1 hover:after:bg-yellow-400"
+              } transition`
             }
           >
             Services
@@ -88,9 +94,11 @@ const Navbar = () => {
             to="/contact"
             onClick={handleLinkClick}
             className={({ isActive }) =>
-              isActive
-                ? "text-blue-500 font-medium block py-2 px-6 md:py-0 md:px-0"
-                : "text-gray-800 hover:text-blue-500 block py-2 px-6 md:py-0 md:px-0"
+              `relative text-xl font-medium block py-2 px-6 md:py-0 md:px-0 ${
+                isActive
+                  ? "text-blue-500 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-yellow-400"
+                  : "text-gray-800 hover:text-blue-500 hover:after:absolute hover:after:left-0 hover:after:bottom-[-4px] hover:after:w-full hover:after:h-1 hover:after:bg-yellow-400"
+              } transition`
             }
           >
             Contact
@@ -99,9 +107,11 @@ const Navbar = () => {
             to="/faqs"
             onClick={handleLinkClick}
             className={({ isActive }) =>
-              isActive
-                ? "text-blue-500 font-medium block py-2 px-6 md:py-0 md:px-0"
-                : "text-gray-800 hover:text-blue-500 block py-2 px-6 md:py-0 md:px-0"
+              `relative text-xl font-medium block py-2 px-6 md:py-0 md:px-0 ${
+                isActive
+                  ? "text-blue-500 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-yellow-400"
+                  : "text-gray-800 hover:text-blue-500 hover:after:absolute hover:after:left-0 hover:after:bottom-[-4px] hover:after:w-full hover:after:h-1 hover:after:bg-yellow-400"
+              } transition`
             }
           >
             FAQs
@@ -109,7 +119,7 @@ const Navbar = () => {
         </nav>
         <Link
           to="/"
-          className="flex items-center justify-center w-60 h-20 text-blue-900 text-xl font-medium border-2 border-blue-900 rounded-3xl hover:bg-blue-800 hover:text-white transition"
+          className="flex items-center justify-center w-60 h-20 m-2 text-blue-900 text-xl font-medium border-2 border-blue-900 rounded-3xl hover:bg-blue-800 hover:text-white transition"
         >
           Call - 07123 456789
         </Link>
