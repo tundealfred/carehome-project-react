@@ -121,7 +121,7 @@ const Navbar = () => {
           to="/"
           className="flex items-center justify-center w-60 h-20 m-2 text-blue-900 text-xl font-medium border-2 border-blue-900 rounded-3xl hover:bg-blue-800 hover:text-white transition"
         >
-          Call - 07123 456789
+          Call : 07123-456789
         </Link>
       </div>
     </header>
