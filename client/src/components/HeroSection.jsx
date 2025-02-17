@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import carePhoto1 from "../assets/carePhoto1.jpg";
-import carePhoto2 from "../assets/carePhoto2.jpg";
 import carePhoto3 from "../assets/carePhoto3.jpg";
 import carePhoto4 from "../assets/carePhoto4.jpg";
 import carePhoto5 from "../assets/carePhoto5.jpg";
@@ -20,7 +18,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             We’re changing the way people connect
           </h1>
-          <p className="text-lg md:text-xl max-w-lg mx-auto md:mx-0 mb-6">
+          <p className="text-lg text-justify md:text-xl max-w-lg mx-auto md:mx-0 mb-6">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
             fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
@@ -34,32 +32,20 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className="md:w-1/2 relative mt-8 md:mt-0">
-          <div className="grid grid-cols-3 gap-2 md:gap-4">
-            <motion.img
-              src={carePhoto3}
-              alt="Tile 1"
-              className="col-span-2 row-span-2 rounded-lg shadow-lg object-cover h-48 md:h-64"
-              whileHover={{ scale: 1.05 }}
-            />
-            <motion.img
-              src={carePhoto4}
-              alt="Tile 2"
-              className="rounded-lg shadow-lg object-cover h-24 md:h-32"
-              whileHover={{ scale: 1.05 }}
-            />
-            <motion.img
-              src={carePhoto5}
-              alt="Tile 3"
-              className="rounded-lg shadow-lg object-cover h-24 md:h-32"
-              whileHover={{ scale: 1.05 }}
-            />
-            <motion.img
-              src={carePhoto6}
-              alt="Tile 4"
-              className="col-span-2 rounded-lg shadow-lg object-cover h-48 md:h-64"
-              whileHover={{ scale: 1.05 }}
-            />
+        <div className="md:w-1/2 relative px-4 mt-8 md:mt-0 flex justify-center">
+          <div className="grid grid-cols-2 gap-4">
+            {[carePhoto3, carePhoto4, carePhoto5, carePhoto6].map(
+              (photo, index) => (
+                <motion.img
+                  key={index}
+                  src={photo}
+                  alt={`Tile ${index + 1}`}
+                  className="w-56 h-32 md:w-64 md:h-48 rounded-lg shadow-lg object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )
+            )}
           </div>
         </div>
       </motion.div>
