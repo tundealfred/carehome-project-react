@@ -16,12 +16,13 @@ const HeroSection = () => {
       >
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            We’re changing the way people connect
+            Bringing Comfort and Care to Every Moment
           </h1>
           <p className="text-lg text-justify md:text-xl max-w-lg mx-auto md:mx-0 mb-6">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
+            At our care home, we create a warm and supportive community where
+            every resident feels valued, safe, and connected. With compassionate
+            care and enriching activities, we ensure a life filled with dignity,
+            joy, and companionship.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
             <a
