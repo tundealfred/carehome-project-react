@@ -40,7 +40,7 @@ const HeroSection = () => {
                   key={index}
                   src={photo}
                   alt={`Tile ${index + 1}`}
-                  className="w-56 h-32 md:w-64 md:h-48 rounded-lg shadow-lg object-cover"
+                  className="w-56 h-32 md:w-72 md:h-48 rounded-lg shadow-lg object-cover"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 />
