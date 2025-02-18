@@ -59,7 +59,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm border-t pt-4">
-          © 2024 Care Home, Inc. All rights reserved.
+          © 2025 Care Home, Inc. All rights reserved.
         </div>
       </div>
     </footer>
