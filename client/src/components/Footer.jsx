@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-blue-700 text-gray-100 py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h2 className="text-xl font-semibold">Care Home</h2>
@@ -53,6 +53,25 @@ const Footer = () => {
               <li>Terms of Service</li>
               <li>Privacy Policy</li>
               <li>License</li>
+            </ul>
+          </div>
+
+          {/* Join Us */}
+          <div>
+            <h3 className="text-lg font-semibold">Join Us</h3>
+            <ul className="mt-2 space-y-2 text-sm">
+              <button
+                type="button"
+                class="text-white hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+              >
+                Care application form
+              </button>
+              <button
+                type="button"
+                class="text-white hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+              >
+                Apply to be a caregiver
+              </button>
             </ul>
           </div>
         </div>
