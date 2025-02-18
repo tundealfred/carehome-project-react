@@ -122,7 +122,7 @@ const Navbar = () => {
           className="flex items-center justify-center w-60 h-20 m-2 text-blue-900 text-xl font-medium border-2 border-yellow-400 rounded-3xl hover:bg-blue-800 hover:text-white transition"
         >
           <svg
-            class="w-8 h-8 text-blue-600 dark:text-gray-400"
+            class="w-8 h-8 text-blue-600 dark:text-blue-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
