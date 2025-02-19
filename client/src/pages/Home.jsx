@@ -221,7 +221,9 @@ const Home = () => {
             <motion.div
               className="flex space-x-6 px-6 my-6"
               drag="x"
-              dragConstraints={{ left: -600, right: 0 }}
+              dragConstraints={{ left: -1200, right: 0 }}
+              dragElastic={0.2} // Increases swipe responsiveness
+              dragTransition={{ bounceStiffness: 150, bounceDamping: 20 }} // Faster motion response
             >
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -229,7 +231,7 @@ const Home = () => {
                   className="bg-white p-6 rounded-lg shadow-lg w-80 min-w-[320px] flex-shrink-0"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <div className="flex items-center justify-center mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (
