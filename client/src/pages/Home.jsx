@@ -7,6 +7,9 @@ import carePhoto1 from "../assets/carePhoto1.jpg";
 import carePhoto2 from "../assets/carePhoto2.jpg";
 import carePhoto7 from "../assets/carePhoto7.jpg";
 import carePhoto8 from "../assets/carePhoto8.jpg";
+import carePhoto9 from "../assets/carePhoto9.jpg";
+import carePhoto10 from "../assets/carePhoto10.jpg";
+import carePhoto11 from "../assets/carePhoto11.jpg";
 
 const services = [
   {
@@ -207,28 +210,31 @@ const Home = () => {
       </section>
 
       {/* Testimonial */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-blue-700 mb-2">
+      <section className="relative py-32">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${carePhoto11})`, opacity: 0.7 }} // Adjust opacity here
+        ></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative z-10 container mx-auto text-center text-white">
+          <h2 className="text-4xl font-bold mb-2">
             Discover What Our Clients Are Saying
           </h2>
-          <p className="text-gray-600 text-lg mb-6">
-            Real stories from real families
-          </p>
+          <p className="text-lg mb-6">Real stories from real families</p>
 
           {/* Scrollable Testimonial Slider */}
-          <div className="overflow-x-scroll no-scrollbar" ref={sliderRef}>
+          <div className="overflow-x-hidden no-scrollbar" ref={sliderRef}>
             <motion.div
               className="flex space-x-6 px-6 my-6"
               drag="x"
-              dragConstraints={{ left: -1200, right: 0 }}
-              dragElastic={0.2} // Increases swipe responsiveness
-              dragTransition={{ bounceStiffness: 150, bounceDamping: 20 }} // Faster motion response
+              dragConstraints={{ left: -1000, right: 0 }}
+              dragElastic={0.2}
+              dragTransition={{ bounceStiffness: 150, bounceDamping: 20 }}
             >
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg w-80 min-w-[320px] flex-shrink-0"
+                  className="bg-white p-6 rounded-lg shadow-lg w-80 min-w-[320px] flex-shrink-0 text-gray-900"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
