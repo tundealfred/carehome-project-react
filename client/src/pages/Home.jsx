@@ -216,7 +216,7 @@ const Home = () => {
           style={{ backgroundImage: `url(${carePhoto11})`, opacity: 0.7 }} // Adjust opacity here
         ></div>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 container mx-auto text-center text-white">
+        <div className="relative container mx-auto text-center text-white">
           <h2 className="text-4xl font-bold mb-2">
             Discover What Our Clients Are Saying
           </h2>
