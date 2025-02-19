@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
 import carePhoto1 from "../assets/carePhoto1.jpg";
@@ -52,7 +53,54 @@ const services = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "Larisha Barnes",
+    date: "6 months ago",
+    rating: 5,
+    review:
+      "A Graceful Way Caregiving is one of the best caregiving companies I have ever seen. They actually treat you like family and go above and beyond to make sure your loved one is cared for.",
+  },
+  {
+    name: "Miracle Wanzo",
+    date: "1 year ago",
+    rating: 5,
+    review:
+      "The caregiver was fabulous, making me feel at ease. From consultation to care, I always felt cared for and in good hands. Highly recommend!",
+  },
+  {
+    name: "Claudette Joseph",
+    date: "2 years ago",
+    rating: 5,
+    review:
+      "As a registered nurse, I recommend A Graceful Way Home Care. They provide excellent service, ensuring respect and independence for patients.",
+  },
+  {
+    name: "Matthew Troedel",
+    date: "2 years ago",
+    rating: 4,
+    review:
+      "Thank you, Ryan and the team! After surgery, I needed home care support, and their service was amazing. Truly grateful for their help!",
+  },
+  {
+    name: "Toby Banks",
+    date: "2 years ago",
+    rating: 5,
+    review:
+      "Look no further if you're looking for in-home care for a loved one or yourself! Amazing service and compassionate caregivers.",
+  },
+  {
+    name: "Jane Smith",
+    date: "4 months ago",
+    rating: 5,
+    review:
+      "I can’t thank A Graceful Way Care enough! They provided wonderful care for my mother during her recovery. Professional and kind staff!",
+  },
+];
+
 const Home = () => {
+  const sliderRef = useRef(null);
+
   return (
     <>
       <HeroSection />
@@ -155,6 +203,50 @@ const Home = () => {
           >
             View All Services
           </Link>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold text-blue-700 mb-2">
+            Discover What Our Clients Are Saying
+          </h2>
+          <p className="text-gray-600 text-lg mb-6">
+            Real stories from real families
+          </p>
+
+          {/* Scrollable Testimonial Slider */}
+          <div className="overflow-x-scroll no-scrollbar" ref={sliderRef}>
+            <motion.div
+              className="flex space-x-6 px-6 my-6"
+              drag="x"
+              dragConstraints={{ left: -600, right: 0 }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-lg w-80 min-w-[320px] flex-shrink-0"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <div className="flex items-center justify-center mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <FaStar key={i} className="text-yellow-500 text-lg" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 italic">"{testimonial.review}"</p>
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold text-blue-700">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-gray-500 text-sm">{testimonial.date}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
     </>
