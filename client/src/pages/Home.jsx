@@ -10,46 +10,58 @@ import carePhoto8 from "../assets/carePhoto8.jpg";
 import carePhoto9 from "../assets/carePhoto9.jpg";
 import carePhoto10 from "../assets/carePhoto10.jpg";
 import carePhoto11 from "../assets/carePhoto11.jpg";
+import carePhoto12 from "../assets/carePhoto12.jpg";
+import carePhoto13 from "../assets/carePhoto13.jpg";
+import carePhoto14 from "../assets/carePhoto14.jpg";
+import carePhoto15 from "../assets/carePhoto15.jpg";
+import carePhoto16 from "../assets/carePhoto16.jpg";
 
 const services = [
   {
     id: 1,
+    image: carePhoto9,
     title: "Care Packages",
     description:
       "Individually designed care packages allowing loved ones to retain independence.",
   },
   {
     id: 2,
+    image: carePhoto14,
     title: "Live-In Care",
     description:
       "24/7 in-home care, ensuring comfort and familiarity instead of moving to a care home.",
   },
   {
     id: 3,
+    image: carePhoto12,
     title: "Home Care",
     description:
       "Hourly care tailored to your loved one's needs in the comfort of their home.",
   },
   {
     id: 4,
+    image: carePhoto16,
     title: "Night Care",
     description:
       "Overnight care providing safety and assistance while families rest.",
   },
   {
     id: 5,
+    image: carePhoto13,
     title: "Home from Hospital",
     description:
       "Short-term care to help regain independence after surgery or an accident.",
   },
   {
     id: 6,
+    image: carePhoto15,
     title: "End-Of-Life Care",
     description:
       "Compassionate care to support families through difficult times.",
   },
   {
     id: 7,
+    image: carePhoto10,
     title: "Dementia Care",
     description:
       "Specialized care for individuals living with dementia in familiar surroundings.",
@@ -196,6 +208,11 @@ const Home = () => {
                 </h3>
                 <p className="text-gray-600 mt-2">{service.description}</p>
               </div>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-48 object-cover"
+              />
             </motion.div>
           ))}
         </div>
