@@ -27,7 +27,7 @@ const HeroSection = () => {
           <div className="flex justify-center md:justify-start space-x-4">
             <a
               href="/services"
-              className="bg-white text-blue-700 py-2 px-6 rounded-lg font-bold hover:bg-gray-200"
+              className="bg-white text-blue-700 py-2 px-6 rounded-lg font-bold hover:bg-yellow-400"
             >
               Get started →
             </a>
