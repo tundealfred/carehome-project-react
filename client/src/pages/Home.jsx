@@ -274,6 +274,37 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section>
+        <motion.div
+          className="relative bg-white text-gray-800 py-12 px-8 flex flex-col md:flex-row items-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Schedule An Assessment Today
+            </h2>
+            <div className="flex justify-center md:justify-start space-x-4">
+              <p className="text-lg md:text-xl max-w-lg mx-auto md:mx-0 mb-2">
+                If you would like to arrange care for you or your loved one our
+                expert advisers will be able to help you navigate the
+                complexities of arranging care, as well as tailoring a bespoke
+                plan to your family’s needs.
+              </p>
+            </div>
+          </div>
+          <div className="md:w-1/2 relative px-4 mt-8 md:mt-0 flex justify-center">
+            <a
+              href="/services"
+              className="bg-blue-600 text-white text-lg py-5 px-12 rounded-lg font-bold hover:bg-yellow-400"
+            >
+              Get in Touch →
+            </a>
+          </div>
+        </motion.div>
+      </section>
     </>
   );
 };
