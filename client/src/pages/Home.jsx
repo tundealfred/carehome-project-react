@@ -297,7 +297,7 @@ const Home = () => {
           </div>
           <div className="md:w-1/2 relative px-4 mt-8 md:mt-0 flex justify-center">
             <a
-              href="/services"
+              href="/contact"
               className="bg-blue-600 text-white text-lg py-5 px-12 rounded-lg font-bold hover:bg-yellow-400"
             >
               Get in Touch →
