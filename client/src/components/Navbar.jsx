@@ -28,6 +28,7 @@ const Navbar = () => {
           className="md:hidden flex items-center text-gray-800 focus:outline-none"
           onClick={toggleMenu}
         >
+          Menu
           {/* Hamburger SVG */}
           <svg
             className="h-6 w-6"
